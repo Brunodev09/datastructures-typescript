@@ -2,7 +2,7 @@
 Building and reversing linked lists with Typescript.
 
 
-#Example
+# Example
 let myMain = new Main();
 let nodes = myMain.createNodes(10, "myStrIdType"); // Will incremented dynamically 
 let list = myMain.insertInLinkedList(nodes);
