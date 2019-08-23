@@ -2,7 +2,7 @@
 Building and reversing linked lists with Typescript.
 
 
-# Example
+# Description
 ```
 Main class methods and parameters:
 
@@ -14,6 +14,16 @@ nodes = array of nodes that returns from the createNode function.
 
 printLinkedList(<List> list) => returns void.
 Prints your dynamically modified string identifier in order of reference.
+
+let myMain = new Main();
+let nodes = myMain.createNodes(10, "myStrIdType"); // Will be incremented dynamically 
+let list = myMain.insertInLinkedList(nodes);
+myMain.printLinkedList(list); 
+```
+
+# Example
+```
+Main class methods and parameters:
 
 let myMain = new Main();
 let nodes = myMain.createNodes(10, "myStrIdType"); // Will be incremented dynamically 
