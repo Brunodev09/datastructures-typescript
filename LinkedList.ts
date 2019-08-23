@@ -17,7 +17,7 @@ export class LinkedList {
 
     hasNextPointer() {
         if (!this.current) return;
-        return this.current.getNextNode();
+        return !!this.current;
     }
 
     insert(node: Node) {
