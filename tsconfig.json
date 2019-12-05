@@ -1,21 +1,29 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "target": "es2017",
-    "module": "commonjs",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": ["es5"],
-    "types": [
-      "node"
-    ],
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "inlineSourceMap": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "target": "es2017",
+    "outDir": "./dist",
+    "module": "commonjs",
+    "baseUrl": "./src",
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
+  "types": [
+    "node",
+    "reflect-metadata"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ],
   "exclude": [
     "node_modules"
   ]
 }
+
+
+
