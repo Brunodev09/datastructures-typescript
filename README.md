@@ -1,44 +1,23 @@
 # reversingLinkedLists
-Building and reversing linked lists with Typescript.
+Playing with data structures with Typescript.
 
-
-# Description
-```
-Main class methods and parameters:
-
-createNode(<number> n, <string> s) => returns type Nodes, which is an array of nodes.
-n = number of nodes to be created and linked together. s = any string identifier.
-
-insertInLinkedList(<Nodes> nodes) => returns type List, that refers to the HEAD.
-nodes = array of nodes that returns from the createNode function.
-
-printLinkedList(<List> list) => returns void.
-Prints your dynamically modified string identifier in order of reference.
-
-let myMain = new Main();
-let nodes = myMain.createNodes(10, "myStrIdType"); // Will be incremented dynamically 
-let list = myMain.insertInLinkedList(nodes);
-myMain.printLinkedList(list); 
-```
 
 # Example
 ```
-Main class methods and parameters:
+let list = new LinkedList();
+list.push("hey");
+list.push("hey2");
+list.push("this is a linkedList");
+list.traverse();
+// list.pop();
+// list.shift();
+list.unshift("I'm the new head!");
+list.traverse();
+list.insert("I'm being inserted at position 2.", 2);
+list.traverse();
+list.remove(2);
+list.traverse();
+list.reverse();
+list.traverse();
 
-let myMain = new Main();
-let nodes = myMain.createNodes(10, "myStrIdType"); // Will be incremented dynamically 
-let list = myMain.insertInLinkedList(nodes);
-myMain.printLinkedList(list); 
-```
-```
---> "myStrIdType0"
---> "myStrIdType1"
---> "myStrIdType2"
---> "myStrIdType3"
---> "myStrIdType4"
---> "myStrIdType5"
---> "myStrIdType6"
---> "myStrIdType7"
---> "myStrIdType8"
---> "myStrIdType9"
 ```
