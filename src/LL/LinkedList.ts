@@ -38,6 +38,13 @@ export class LinkedList {
         return this;
     }
 
+    pushCollection(arr : any[]) : LinkedList {
+        for (let item of arr) {
+            this.push(item);
+        }
+        return this;
+    }
+
     shift() : any {
         if (!this.length) return undefined;
         let current = this.head;
@@ -131,6 +138,7 @@ export class LinkedList {
         }
     }
 
+
     reverse() : LinkedList {
         // First I'm swapping the head with the tail with the node aux variable.
         let node = this.head;
@@ -139,7 +147,43 @@ export class LinkedList {
         let next;
         let prev = null;
 
+        // Example:
+        // 7 -> 2 -> 9 -> 5
+        // 5 -> 9 -> 2 -> 7
+
+        // node -> 7
+        // head -> 5
+        // tail -> 7
+        // prev -> null
+
         for (let i = 0; i < this.length; i++) {
+            // i = 0
+            // next -> 2
+            // node.next -> null
+            // prev -> 7
+            // node -> next -> 2
+            // Here we end up with: 7 -> null
+            // -----------------
+            // i = 1
+            // next -> 9
+            // node.next -> 7
+            // prev -> 2
+            // node -> 9
+            // Here we end up with: 2 -> 7 -> null
+            // -----------------
+            // i = 2
+            // next -> 5
+            // node.next -> 2
+            // prev -> 9
+            // node -> 5
+            // Here we end up with: 9 -> 2 -> 7 -> null
+            // -----------------
+            // i = 3
+            // next -> null
+            // node.next -> 9
+            // prev -> 5
+            // node -> null
+            // Here we end up with: 5 -> 9 -> 2 -> 7 -> null
             next = node.next;
             node.next = prev;
             prev = node;
