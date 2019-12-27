@@ -1,4 +1,4 @@
-# reversingLinkedLists
+# Datastructures with TS
 Playing with data structures with Typescript.
 
 
